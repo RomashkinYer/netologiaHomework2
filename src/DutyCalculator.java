@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class DutyCalculator{
 
     public static void main(String[] args) {
+        System.out.println("Доброго времени суток, уважаемый гость программы!!! ʕ•́ᴥ•̀ʔっ");
+
         //Открытие скана консоли
         Scanner scanner = new Scanner(System.in);
 
@@ -25,12 +27,12 @@ public class DutyCalculator{
 
     //Метод для рассчета пошлины
     private static int calculateDatu(int price, int weight) {
-        // 1 копейка за каждый рубль цены товара
-        int dutyFromPrice = price;
-        // 100 рублей за каждый килограмм товара
-        int dutyFromWeight = weight * 100;
-        // Общая сумма пошлины
-        return dutyFromPrice + dutyFromWeight;
+       //1 копейка за каждый рубль цены на товар
+       double dutyPrice = price * 0.01;
+       //100 рублей за каждый килограмм товара
+       int dutyWeight = weight * 100;
+        //Итоговая округленная стоимость
+       return (int) Math.floor(dutyPrice) + dutyWeight;
     }
 
 }
